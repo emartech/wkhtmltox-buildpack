@@ -1,3 +1,6 @@
+# 0.4
+* remove left behind ruby stuff 
+
 # 0.3
 
 * Added wkhtmltoimage
