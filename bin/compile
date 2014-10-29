@@ -26,4 +26,4 @@ chmod +x "bin/$WKHTML_TO_PDF"
 chmod +x "bin/$WKHTML_TO_IMAGE"
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/bin' > .profile.d/wkhtmltox.sh
+echo "export PATH=\"\$PATH:\$HOME/bin\";" > $BUILD_DIR/.profile.d/wkhtmltox.sh
