@@ -9,6 +9,7 @@ CACHE_DIR=$2
 
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 OPT_DIR=$(cd "$BIN_DIR/../opt"; pwd)
+FONTS_DIR=$(cd "$BIN_DIR/../fonts"; pwd)
 
 WKHTML_TO_PDF="wkhtmltopdf"
 WKHTML_TO_IMAGE="wkhtmltoimage"
@@ -27,3 +28,7 @@ chmod +x "bin/$WKHTML_TO_IMAGE"
 
 mkdir -p .profile.d
 echo 'export PATH=$PATH:$HOME/bin' > .profile.d/wkhtmltox.sh
+
+mkdir -p .fonts/
+cp $FONTS_DIR/* .fonts/
+fc-cache -f .fonts
